@@ -59,7 +59,9 @@ The child detector allows more accurate detections when the video contains multi
 
 ### Downloads
 
-[ASDMotion Dataset.](https://drive.google.com/file/d/1MiNIhlf4mL-vRW1ub2TP3nCYzfMW0bYt/view?usp=drive_link)
+[ASDMotion Dataset (No annotations).](https://drive.google.com/file/d/1MiNIhlf4mL-vRW1ub2TP3nCYzfMW0bYt/view?usp=drive_link)
+
+[Annotated Dataset for Training.](https://drive.google.com/file/d/13t1tO4ZxTKmQG-w6fTy3hHQy8gX1bopl/view?usp=sharing)
 
 [Checkpoint weights for inference.](https://drive.google.com/file/d/1PuPXu6pfBYjz0G6NvWOEUQ_RvedvinAE/view?usp=drive_link)
 
