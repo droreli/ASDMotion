@@ -14,6 +14,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
 
 # ---- System dependencies ----
+# Ubuntu 22.04 ships with Python 3.10; using it directly (ASDMotion works with 3.9+)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
@@ -29,15 +30,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libboost-all-dev \
     libhdf5-dev \
     libatlas-base-dev \
-    python3.9 \
-    python3.9-dev \
-    python3.9-venv \
+    python3 \
+    python3-dev \
+    python3-venv \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
-# Make python3.9 the default
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1 && \
-    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
+# Ensure 'python' command is available
+RUN ln -sf /usr/bin/python3 /usr/bin/python
 
 RUN python -m pip install --upgrade pip setuptools wheel
 
